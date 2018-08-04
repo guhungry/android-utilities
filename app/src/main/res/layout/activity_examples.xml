@@ -8,6 +8,7 @@
     tools:context=".app.ExamplesActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_example"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/list_item_example" />
