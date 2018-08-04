@@ -28,7 +28,8 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Android X
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation "androidx.appcompat:appcompat:$androidx_version"
+    implementation "androidx.recyclerview:recyclerview:$androidx_version"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
 
     // Glide - Image Loader Library
