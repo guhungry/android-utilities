@@ -1,14 +1,13 @@
 package com.guhungry.utilities.app
 
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.guhungry.utilities.R
 import com.guhungry.utilities.app.base.BaseActivity
 import com.guhungry.utilities.app.listexample.ExampleAdapter
 import kotlinx.android.synthetic.main.activity_examples.*
 
-typealias ExampleModel = Pair<String, String>
+typealias ExampleModel = Pair<String, Int>
 
 class ExamplesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +24,26 @@ class ExamplesActivity : BaseActivity() {
     }
 
     private fun getExamplesList(): List<ExampleModel> = listOf(
-            "Image Utils" to "bee",
-            "XXX Utils" to "bee",
-            "YYY Utils" to "bee"
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel,
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel,
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel,
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel,
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel,
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel,
+            "Image Utils" to R.drawable.icon_image,
+            "XXX Utils" to android.R.drawable.ic_media_play,
+            "YYY Utils" to android.R.drawable.ic_menu_close_clear_cancel
     )
 }
