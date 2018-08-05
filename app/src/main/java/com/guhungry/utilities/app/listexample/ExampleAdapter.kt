@@ -40,7 +40,7 @@ class ExampleAdapter(context: Context, private val list: List<ExampleModel>) : R
         fun onBind(item: ExampleModel) {
             itemView.tag = item
 
-            itemView.name.text = item.title
+            itemView.name.setText(item.title)
             ImageUtils.loadImage(itemView.icon, item.icon, itemView.icon.context)
         }
     }

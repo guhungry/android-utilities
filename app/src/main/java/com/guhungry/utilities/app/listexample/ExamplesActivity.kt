@@ -8,7 +8,7 @@ import com.guhungry.utilities.app.base.BaseActivity
 import com.guhungry.utilities.app.imageutils.ImageUtilsActivity
 import kotlinx.android.synthetic.main.activity_examples.*
 
-data class ExampleModel(val title: String, val icon: Int, val target: Class<*>)
+data class ExampleModel(val title: Int, val icon: Int, val target: Class<*>)
 
 class ExamplesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +31,6 @@ class ExamplesActivity : BaseActivity() {
     }
 
     private val examples = listOf(
-            ExampleModel("Image Utils", R.drawable.icon_image, ImageUtilsActivity::class.java)
+            ExampleModel(R.string.image_utils, R.drawable.icon_image, ImageUtilsActivity::class.java)
     )
 }

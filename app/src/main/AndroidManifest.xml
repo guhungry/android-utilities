@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.imageutils.ImageUtilsActivity"></activity>
+        <activity android:name=".app.imageutils.ImageUtilsActivity"
+            android:label="@string/image_utils"
+            android:parentActivityName=".app.listexample.ExamplesActivity"/>
     </application>
 
 </manifest>

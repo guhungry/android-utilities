@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Utilities</string>
+    <string name="image_utils">Image Utils</string>
 </resources>
