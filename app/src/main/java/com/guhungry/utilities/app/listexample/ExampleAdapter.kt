@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.guhungry.utilities.ImageUtilsFacade as ImageUtils
 import com.guhungry.utilities.R
-import com.guhungry.utilities.app.ExampleModel
 import com.guhungry.utilities.app.listexample.ExampleAdapter.ExampleViewHolder
 import kotlinx.android.synthetic.main.list_item_example.view.*
 
-class ExampleAdapter(private val context: Context, private val list: List<ExampleModel>) : RecyclerView.Adapter<ExampleViewHolder>() {
+class ExampleAdapter(context: Context, private val list: List<ExampleModel>) : RecyclerView.Adapter<ExampleViewHolder>() {
     private val inflater = LayoutInflater.from(context)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
@@ -28,8 +27,8 @@ class ExampleAdapter(private val context: Context, private val list: List<Exampl
 
     class ExampleViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun onBind(item: ExampleModel) {
-            itemView.name.text = "ExampleViewHolder Bind ${item.first}"
-            ImageUtils.loadImage(itemView.icon, item.second, itemView.icon.context)
+            itemView.name.text = item.title
+            ImageUtils.loadImage(itemView.icon, item.icon, itemView.icon.context)
         }
     }
 }
