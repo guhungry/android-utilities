@@ -1,12 +1,14 @@
 package com.guhungry.utilities.app.listexample
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.guhungry.utilities.R
 import com.guhungry.utilities.app.base.BaseActivity
+import com.guhungry.utilities.app.imageutils.ImageUtilsActivity
 import kotlinx.android.synthetic.main.activity_examples.*
 
-data class ExampleModel(val title: String, val icon: Int)
+data class ExampleModel(val title: String, val icon: Int, val target: Class<*>)
 
 class ExamplesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,36 +21,16 @@ class ExamplesActivity : BaseActivity() {
     private fun setupList() {
         list_example.layoutManager = LinearLayoutManager(this)
 
-        list_example.adapter = ExampleAdapter(this, examples)
+        list_example.adapter = ExampleAdapter(this, examples).apply {
+            setOnItemClickListener { showExample(it) }
+        }
     }
 
-    private val examples: List<ExampleModel> = listOf(
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel),
-            ExampleModel("Image Utils", R.drawable.icon_image),
-            ExampleModel("XXX Utils", android.R.drawable.ic_media_play),
-            ExampleModel("YYY Utils", android.R.drawable.ic_menu_close_clear_cancel)
+    private fun showExample(example: ExampleModel) {
+        startActivity(Intent(this, example.target))
+    }
+
+    private val examples = listOf(
+            ExampleModel("Image Utils", R.drawable.icon_image, ImageUtilsActivity::class.java)
     )
 }
