@@ -25,7 +25,10 @@
         <activity
             android:name=".app.rxjava.RxJavaActivity"
             android:label="@string/rxjava"
-            android:parentActivityName=".app.listexample.ExamplesActivity"></activity>
+            android:parentActivityName=".app.listexample.ExamplesActivity" />
+        <activity android:name=".app.rxjava.RxJavaBlankActivity"
+            android:label="@string/rxjava"
+            android:parentActivityName=".app.rxjava.RxJavaBlankActivity" />
     </application>
 
 </manifest>
