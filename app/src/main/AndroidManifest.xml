@@ -26,9 +26,14 @@
             android:name=".app.rxjava.RxJavaActivity"
             android:label="@string/rxjava"
             android:parentActivityName=".app.listexample.ExamplesActivity" />
-        <activity android:name=".app.rxjava.RxJavaBlankActivity"
+        <activity
+            android:name=".app.rxjava.RxJavaBlankActivity"
             android:label="@string/rxjava"
             android:parentActivityName=".app.rxjava.RxJavaBlankActivity" />
+        <activity
+            android:name=".app.retrofit.RetrofitActivity"
+            android:label="@string/retrofit"
+            android:parentActivityName=".app.listexample.ExamplesActivity" />
     </application>
 
 </manifest>
