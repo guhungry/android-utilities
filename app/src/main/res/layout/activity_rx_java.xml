@@ -10,10 +10,35 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test delay observe" />
+        android:text="Test delay observable" />
 
     <TextView
         android:id="@+id/rxjava1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test filtered observable" />
+
+    <TextView
+        android:id="@+id/rxjava2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test EditText observable" />
+
+    <EditText
+        android:id="@+id/rxjava3_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/rxjava3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -22,5 +47,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Blank Activity" />
+        android:text="Blank Activity (Debounce 2 Seconds)" />
 </LinearLayout>
