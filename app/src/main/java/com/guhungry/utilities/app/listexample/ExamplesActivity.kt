@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.guhungry.utilities.R
 import com.guhungry.utilities.app.base.BaseActivity
 import com.guhungry.utilities.app.imageutils.ImageUtilsActivity
+import com.guhungry.utilities.app.retrofit.RetrofitActivity
 import com.guhungry.utilities.app.rxjava.RxJavaActivity
 import kotlinx.android.synthetic.main.activity_examples.*
 
@@ -33,6 +34,7 @@ class ExamplesActivity : BaseActivity() {
 
     private val examples = listOf(
             ExampleModel(R.string.image_utils, R.drawable.icon_image, ImageUtilsActivity::class.java),
+            ExampleModel(R.string.retrofit, R.drawable.icon_rxjava, RetrofitActivity::class.java),
             ExampleModel(R.string.rxjava, R.drawable.icon_rxjava, RxJavaActivity::class.java)
     )
 }
