@@ -18,7 +18,7 @@ object NetworkUtils {
                 .baseUrl(baseUrl)
                 .addConverterFactory(getConverter())
                 .addCallAdapterFactory(getCallAdapter())
-                .build();
+                .build()
     }
 
     private fun getConverter(): Converter.Factory {
